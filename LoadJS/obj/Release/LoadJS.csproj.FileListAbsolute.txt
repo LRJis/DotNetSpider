@@ -1,0 +1,6 @@
+E:\project\Spider2\LoadJS\bin\Release\LoadJS.dll
+E:\project\Spider2\LoadJS\bin\Release\LoadJS.pdb
+E:\project\Spider2\LoadJS\obj\Release\LoadJS.csproj.AssemblyReference.cache
+E:\project\Spider2\LoadJS\obj\Release\LoadJS.csproj.CoreCompileInputs.cache
+E:\project\Spider2\LoadJS\obj\Release\LoadJS.dll
+E:\project\Spider2\LoadJS\obj\Release\LoadJS.pdb

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="zh-cn" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="左移和右移运算符 (“<”< 和“>>”) " />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/zh-cn/cpp/cpp/left-shift-and-right-shift-operators-input-and-output" />
+			<meta property="og:description" content="详细了解：左移和右移运算符 (“<”< 和“>>”) " />
+
+	<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+
+	<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+
+	<meta name="twitter:site" content="@docsmsft" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="audience" content="developer" />
+<meta name="author" content="corob-msft" />
+<meta name="breadcrumb_path" content="../_breadcrumb/toc.json" />
+<meta name="depot_name" content="VS.vcppdocs" />
+<meta name="description" content="详细了解：左移和右移运算符 (“<”< 和“>>”) " />
+<meta name="document_id" content="00133a11-3d48-93d8-769a-8754647b9857" />
+<meta name="document_version_independent_id" content="f9fff31c-62b4-6708-ed55-f4993df9619d" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/cpp-docs-pr/blob/df29e3b545a1dd747ce0b51bc5fcd115cb2df408/docs/cpp/left-shift-and-right-shift-operators-input-and-output.md" />
+<meta name="loc_file_id" content="Github-70020392.live.VS.vcppdocs.cpp/left-shift-and-right-shift-operators-input-and-output.md" />
+<meta name="loc_source_id" content="Github-70020392#live" />
+<meta name="loc_version" content="2021-12-10T20:35:18.0028145Z" />
+<meta name="locale" content="zh-cn" />
+<meta name="manager" content="markl" />
+<meta name="monikers" content="msvc-140" />
+<meta name="monikers" content="msvc-150" />
+<meta name="monikers" content="msvc-160" />
+<meta name="monikers" content="msvc-170" />
+<meta name="ms.assetid" content="25fa0cbb-5fdd-4657-8745-b35f7d8f1606" />
+<meta name="ms.author" content="corob" />
+<meta name="ms.contentlocale" content="zh-cn" />
+<meta name="ms.date" content="12/09/2021" />
+<meta name="ms.prod" content="visual-cpp" />
+<meta name="ms.technology" content="cpp-language" />
+<meta name="ms.tgt_pltfrm" content="Windows" />
+<meta name="ms.topic" content="language-reference" />
+<meta name="ms.translationtype" content="MT" />
+<meta name="ms.workload" content="cplusplus" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/cpp-docs-pr/blob/live/docs/cpp/left-shift-and-right-shift-operators-input-and-output.md" />
+<meta name="page_type" content="conceptual" />
+<meta name="ROBOTS" content="INDEX,FOLLOW" />
+<meta name="schema" content="Conceptual" />
+<meta name="search.mshattr.devlang" content="c++ cpp" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_rel" content="toc.json" />
+<meta name="updated_at" content="2022-07-19 06:13 PM" />
+<meta name="word_count" content="1494" />
+
+
+
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/8b896464-3b7d-4e1f-84b0-9bb45aeb5f64" data-source="generated" />
+
+	
+
+	<meta name="scope" content="C++" />
+	<meta name="github_feedback_content_git_url" content="https://github.com/Microsoft/cpp-docs/blob/main/docs/cpp/left-shift-and-right-shift-operators-input-and-output.md" />
+<link href="https://docs.microsoft.com/zh-cn/cpp/cpp/left-shift-and-right-shift-operators-input-and-output" rel="canonical">
+	<title>左移和右移运算符 (“<”< 和“>>”)  | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/zh-cn/_themes/styles/1c170db1.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'zh-cn',
+			contentDir: 'ltr',
+			userLocale: 'zh-cn',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			extendBreadcrumb: true,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "corob-msft", url: "https://github.com/corob-msft" },
+						{ name: "Taojunshen", url: "https://github.com/Taojunshen" },
+						{ name: "v-kents", url: "https://github.com/v-kents" },
+						{ name: "oboukli", url: "https://github.com/oboukli" },
+						{ name: "Mikejo5000", url: "https://github.com/Mikejo5000" },
+						{ name: "mikeblome", url: "https://github.com/mikeblome" },
+						{ name: "ghogen", url: "https://github.com/ghogen" },
+						{ name: "Saisang", url: "https://github.com/Saisang" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/zh-cn/_themes/global/67a45209.deprecation.js"></script>
+		<script src="/_themes/docs.theme/master/zh-cn/_themes/scripts/7e59c32c.index-docs.js"></script>
+</head>
+
+<body lang="zh-cn" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">跳转至主内容</a>
+
+		<div hidden id="cookie-consent-holder"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">此浏览器不再受支持。</p>
+				<p style="font-size: 16px; margin-top: 16px;">请升级到 Microsoft Edge 以使用最新的功能、安全更新和技术支持。</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+下载 Microsoft Edge					</a>
+					<a href="https://docs.microsoft.com/en-US/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+更多信息					</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="is-hidden"></div>
+</header>		</div>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+目录						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>退出焦点模式</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-fixed display-flex flex-direction-column" role="navigation" aria-label="主要"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" role="main" data-bi-name="content" lang="zh-cn" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+									<bread-crumbs id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop" id="page-breadcrumbs"></bread-crumbs>
+
+									<div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+											<div class="language dropdown display-flex align-items-center">
+												<button class="dropdown-trigger button button-clear button-sm button-primary" aria-controls="language-menu" aria-expanded="false" title="语言" data-bi-name="language">
+													<span class="lang-title align-self-flex-start" dir="ltr">语言</span>
+													<span class="icon" aria-hidden="true">
+														<span class="docon docon-chevron-down-light expanded-indicator"></span>
+													</span>
+												</button>
+												<div class="dropdown-menu padding-xxs language-selector" name="language-selector" role="menu">
+													<ul data-bi-name="language-links" dir="ltr">
+														<li>
+															<a class="button button-clear button-sm button-block" data-bi-name="lang-c++" tabindex="0" aria-selected="false"></a>
+														</li>
+														<li>
+															<a class="button button-clear button-sm button-block" data-bi-name="lang-cpp" tabindex="0" aria-selected="false"></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+										<a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="使用英语阅读" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>使用英语阅读</span>
+										</a>
+
+											<button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="添加到集合">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">保存</span>
+											</button>
+										
+
+										
+
+										
+
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="更多操作">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														aria-label="目录"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+														<span class="contents-expand-title">目录</span>
+													</button>
+
+												<a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="使用英语阅读" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>使用英语阅读</span>
+												</a>
+
+													<button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="添加到集合"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">保存</span>
+													</button>
+
+
+
+
+													<div aria-hidden="true" class="margin-none display-none-tablet border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>电子邮件</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div class="">
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" aria-label="目录" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+									<span class="contents-expand-title">目录</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="left-shift-and-right-shift-operators--and-">左移和右移运算符 (<code>&lt;&lt;</code> 和 <code>&gt;&gt;</code>) </h1>
+
+
+									<div class="display-flex-tablet justify-content-space-between-tablet page-metadata-container">
+										<ul class="metadata page-metadata" data-bi-name="page info" lang="zh-cn" dir="ltr">
+												<li>
+项目												</li>
+												<li>
+													<time class="is-invisible" data-article-date aria-label="文章评审日期" datetime="2022-07-19T18:13:00Z" data-article-date-source="git">07/19/2022</time>
+												</li>
+													<li class="contributors-holder">
+														<button aria-label="查看所有参与者" class="contributors-button link-button" data-bi-name="contributors" title="查看所有参与者">
+																8 个参与者
+														</button>
+													</li>
+										</ul>
+
+<div id="user-feedback" class="display-flex" data-hide-on-archived>
+	<button
+		class="thumb-rating-button like link-button margin-xxs margin-right-none"
+		data-binary-rating-response="rating-yes"
+		title="本文非常有用"
+		type="button"
+		data-bi-name="rating-yes"
+		data-bi-sat="1"
+	>
+		<span class="icon docon docon-like" aria-hidden="true"></span>
+	</button>
+	<button
+		class="thumb-rating-button dislike link-button margin-xxs margin-right-none"
+		data-binary-rating-response="rating-no"
+		title="本文没有用"
+		type="button"
+		data-bi-name="rating-no"
+		data-bi-sat="0"
+	>
+		<span class="icon docon docon-dislike" aria-hidden="true"></span>
+	</button>
+</div>
+									</div>
+
+										<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="文章大纲">
+											<h3>本文内容</h3>
+										</nav>
+
+								<!-- <content> -->
+									<p>按位移位运算符是右移运算符 (<strong><code>&gt;&gt;</code></strong>) ，该运算符将整数或枚举类型表达式的位移到右侧，左移运算符 (<strong><code>&lt;&lt;</code></strong>) ，该运算符将位移到左侧。 <sup>1</sup></p>
+<h2 id="syntax">语法</h2>
+<p><em><code>shift-expression</code></em>:<br>
+&amp;emsp <em><code>additive-expression</code></em><br>
+&amp;emsp <em><code>shift-expression</code></em><strong><code>&lt;&lt;</code></strong><em><code>additive-expression</code></em><br>
+&amp;emsp <em><code>shift-expression</code></em><strong><code>&gt;&gt;</code></strong><em><code>additive-expression</code></em></p>
+<h2 id="remarks">注解</h2>
+<div class="IMPORTANT">
+<p>重要</p>
+<p>对于 x86 和 x64 体系结构Windows，以下说明和示例有效。 在 ARM 设备的Windows上，左移和右移运算符的实现明显不同。 有关详细信息，请参阅 <a href="https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/" data-linktype="external">Hello ARM</a> 博客文章的“Shift 运算符”部分。</p>
+</div>
+<h2 id="left-shifts">左移</h2>
+<p>左移运算符使位 <em><code>shift-expression</code></em> 按指定的 <em><code>additive-expression</code></em>位置数向左移。 因移位运算而空出的位上将用零填充。 左移是逻辑移动（从末端移掉的位将被舍弃，包括符号位）。 有关按位移位类型的详细信息，请参阅 <a href="https://en.wikipedia.org/wiki/Bitwise_shift" data-linktype="external">按位移</a>位。</p>
+<p>以下示例将显示使用无符号数字的左移运算。 该示例通过将值表示为 bitset 来显示对位的操作。 有关详细信息，请参阅 <a href="../standard-library/bitset-class?view=msvc-170" data-linktype="relative-path">bitset 类</a>。</p>
+<pre><code class="lang-cpp">#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+using namespace std;
+
+int main() {
+    unsigned short short1 = 4;
+    bitset&lt;16&gt; bitset1{short1};   // the bitset representation of 4
+    cout &lt;&lt; bitset1 &lt;&lt; endl;  // 0b00000000'00000100
+
+    unsigned short short2 = short1 &lt;&lt; 1;     // 4 left-shifted by 1 = 8
+    bitset&lt;16&gt; bitset2{short2};
+    cout &lt;&lt; bitset2 &lt;&lt; endl;  // 0b00000000'00001000
+
+    unsigned short short3 = short1 &lt;&lt; 2;     // 4 left-shifted by 2 = 16
+    bitset&lt;16&gt; bitset3{short3};
+    cout &lt;&lt; bitset3 &lt;&lt; endl;  // 0b00000000'00010000
+}
+</code></pre>
+<p>如果你左移有符号的数字，以至于符号位受影响，则结果是不确定的。 以下示例显示了当 1 位左移到符号位位置时会发生什么情况。</p>
+<pre><code class="lang-cpp">#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+using namespace std;
+
+int main() {
+    short short1 = 16384;
+    bitset&lt;16&gt; bitset1(short1);
+    cout &lt;&lt; bitset1 &lt;&lt; endl;  // 0b01000000'00000000
+
+    short short3 = short1 &lt;&lt; 1;
+    bitset&lt;16&gt; bitset3(short3);  // 16384 left-shifted by 1 = -32768
+    cout &lt;&lt; bitset3 &lt;&lt; endl;  // 0b10000000'00000000
+
+    short short4 = short1 &lt;&lt; 14;
+    bitset&lt;16&gt; bitset4(short4);  // 4 left-shifted by 14 = 0
+    cout &lt;&lt; bitset4 &lt;&lt; endl;  // 0b00000000'00000000
+}
+</code></pre>
+<h2 id="right-shifts">右移</h2>
+<p>右移运算符使位模式 <em><code>shift-expression</code></em> 按指定的 <em><code>additive-expression</code></em>位置数向右移动。 对于无符号数字，因移位运算而空出的位上将用零填充。 对于有符号数字，符号位用于填充空出的位。 也就是说，如果数字为正，则使用 0；如果数字为负，则使用 1。</p>
+<div class="IMPORTANT">
+<p>重要</p>
+<p>符号为负的数字右移的结果依实现而定。 尽管 Microsoft C++ 编译器使用符号位填充空位位置，但不能保证其他实现也这样做。</p>
+</div>
+<p>以下示例显示使用无符号数字的右移运算：</p>
+<pre><code class="lang-cpp">#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+using namespace std;
+
+int main() {
+    unsigned short short11 = 1024;
+    bitset&lt;16&gt; bitset11{short11};
+    cout &lt;&lt; bitset11 &lt;&lt; endl;     // 0b00000100'00000000
+
+    unsigned short short12 = short11 &gt;&gt; 1;  // 512
+    bitset&lt;16&gt; bitset12{short12};
+    cout &lt;&lt; bitset12 &lt;&lt; endl;     // 0b00000010'00000000
+
+    unsigned short short13 = short11 &gt;&gt; 10;  // 1
+    bitset&lt;16&gt; bitset13{short13};
+    cout &lt;&lt; bitset13 &lt;&lt; endl;     // 0b00000000'00000001
+
+    unsigned short short14 = short11 &gt;&gt; 11;  // 0
+    bitset&lt;16&gt; bitset14{short14};
+    cout &lt;&lt; bitset14 &lt;&lt; endl;     // 0b00000000'00000000
+}
+</code></pre>
+<p>下一示例显示使用符号为正的数字的右移运算。</p>
+<pre><code class="lang-cpp">#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+using namespace std;
+
+int main() {
+    short short1 = 1024;
+    bitset&lt;16&gt; bitset1(short1);
+    cout &lt;&lt; bitset1 &lt;&lt; endl;     // 0b00000100'00000000
+
+    short short2 = short1 &gt;&gt; 1;  // 512
+    bitset&lt;16&gt; bitset2(short2);
+    cout &lt;&lt; bitset2 &lt;&lt; endl;     // 0b00000010'00000000
+
+    short short3 = short1 &gt;&gt; 11;  // 0
+    bitset&lt;16&gt; bitset3(short3);
+    cout &lt;&lt; bitset3 &lt;&lt; endl;     // 0b00000000'00000000
+}
+</code></pre>
+<p>下一示例显示使用符号为负的整数的右移运算。</p>
+<pre><code class="lang-cpp">#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+using namespace std;
+
+int main() {
+    short neg1 = -16;
+    bitset&lt;16&gt; bn1(neg1);
+    cout &lt;&lt; bn1 &lt;&lt; endl;  // 0b11111111'11110000
+
+    short neg2 = neg1 &gt;&gt; 1; // -8
+    bitset&lt;16&gt; bn2(neg2);
+    cout &lt;&lt; bn2 &lt;&lt; endl;  // 0b11111111'11111000
+
+    short neg3 = neg1 &gt;&gt; 2; // -4
+    bitset&lt;16&gt; bn3(neg3);
+    cout &lt;&lt; bn3 &lt;&lt; endl;  // 0b11111111'11111100
+
+    short neg4 = neg1 &gt;&gt; 4; // -1
+    bitset&lt;16&gt; bn4(neg4);
+    cout &lt;&lt; bn4 &lt;&lt; endl;  // 0b11111111'11111111
+
+    short neg5 = neg1 &gt;&gt; 5; // -1
+    bitset&lt;16&gt; bn5(neg5);
+    cout &lt;&lt; bn5 &lt;&lt; endl;  // 0b11111111'11111111
+}
+</code></pre>
+<h2 id="shifts-and-promotions">班次和促销</h2>
+<p>移位运算符两侧的表达式必须是整数类型。 积分提升根据 <a href="standard-conversions?view=msvc-170" data-linktype="relative-path">标准转换</a>中所述的规则执行。 结果的类型与所 <em><code>shift-expression</code></em>提升的类型相同。</p>
+<p>在以下示例中，类型 <strong><code>char</code></strong> 变量将提升为一个 <strong><code>int</code></strong>变量。</p>
+<pre><code class="lang-cpp">#include &lt;iostream&gt;
+#include &lt;typeinfo&gt;
+
+using namespace std;
+
+int main() {
+    char char1 = 'a';
+
+    auto promoted1 = char1 &lt;&lt; 1;   // 194
+    cout &lt;&lt; typeid(promoted1).name() &lt;&lt; endl;  // int
+
+    auto promoted2 = char1 &lt;&lt; 10;  // 99328
+    cout &lt;&lt; typeid(promoted2).name() &lt;&lt; endl;  // int
+}
+</code></pre>
+<h2 id="details">详细信息</h2>
+<p>如果 <em><code>additive-expression</code></em> 为负数或 <em><code>additive-expression</code></em> 大于或等于提升) <em><code>shift-expression</code></em> (中的位数，则未定义 shift 操作的结果。 如果 <em><code>additive-expression</code></em> 为 0，则不执行 Shift 操作。</p>
+<pre><code class="lang-cpp">#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+using namespace std;
+
+int main() {
+    unsigned int int1 = 4;
+    bitset&lt;32&gt; b1{int1};
+    cout &lt;&lt; b1 &lt;&lt; endl;    // 0b00000000'00000000'00000000'00000100
+
+    unsigned int int2 = int1 &lt;&lt; -3;  // C4293: '&lt;&lt;' : shift count negative or too big, undefined behavior
+    unsigned int int3 = int1 &gt;&gt; -3;  // C4293: '&gt;&gt;' : shift count negative or too big, undefined behavior
+    unsigned int int4 = int1 &lt;&lt; 32;  // C4293: '&lt;&lt;' : shift count negative or too big, undefined behavior
+    unsigned int int5 = int1 &gt;&gt; 32;  // C4293: '&gt;&gt;' : shift count negative or too big, undefined behavior
+    unsigned int int6 = int1 &lt;&lt; 0;
+    bitset&lt;32&gt; b6{int6};
+    cout &lt;&lt; b6 &lt;&lt; endl;    // 0b00000000'00000000'00000000'00000100 (no change)
+}
+</code></pre>
+<h2 id="footnotes">脚注</h2>
+<p><sup>1</sup> 以下是 C++11 ISO 规范中的 shift 运算符的说明， (INCITS/ISO/IEC 14882-2011[2012]) ，第 5.8.2 节和第 5.8.3 节。</p>
+<p><code>E1 &lt;&lt; E2</code> 的值是 <code>E1</code> 向左移动 <code>E2</code> 位的结果，空出的位用零填充。 如果<code>E1</code>具有无符号类型，则结果的值为 <strong>E1 ×</strong><sup><strong>2E2</strong></sup>，比结果类型中可表示的最大值减少一个。 否则，如果<code>E1</code>具有有符号类型和非负值，并且 <strong>E1 ×</strong><sup><strong>2E2</strong></sup> 在结果类型的相应无符号类型中表示，则该值转换为结果类型是结果值;否则，行为是未定义的。</p>
+<p><code>E1 &gt;&gt; E2</code> 的值是 <code>E1</code> 向右移动 <code>E2</code> 位的结果。 如果 <code>E1</code> 具有无符号类型，或者具有 <code>E1</code> 有有符号类型和非负值，则结果的值是 <strong>E1/</strong><sup><strong>2E2</strong></sup> 商的整型部分。 如果 <code>E1</code> 属于有符号类型且为负值，则结果值由实现决定。</p>
+<h2 id="see-also">另请参阅</h2>
+<p><a href="expressions-with-binary-operators?view=msvc-170" data-linktype="relative-path">使用二元运算符的表达式</a><br>
+<a href="cpp-built-in-operators-precedence-and-associativity?view=msvc-170" data-linktype="relative-path">C++ 内置运算符、优先级和关联性</a></p>
+
+							</div>
+
+							<div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+							<section id="recommendations-section" data-bi-name="recommendations"></section>
+							<section id="right-rail-recommendations-mobile" data-bi-name="recommendations" class="display-none-desktop margin-top-xxs" hidden></section>
+						<!-- end recommendations section -->
+
+							<section id="right-rail-learning-resources-mobile" class="display-none-desktop margin-top-xxs" data-bi-name="learning-resources-card" hidden></section>
+							<section id="right-rail-qna-mobile" class="display-none-desktop margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<section id="right-rail-events-mobile" class="display-none-desktop margin-top-xs" data-bi-name="events-card" hidden></section>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="主题" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>主题</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs">
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+亮					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+暗					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高对比度					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/previous-versions/" data-bi-name="archivelink">旧版文档</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/teamblog/" data-bi-name="bloglink">博客</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/contribute/" data-bi-name="contributorGuide">参与</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隐私和 Cookie</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/legal/termsofuse" data-bi-name="termsofuse">使用条款</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商标</a></li>
+		<li>&copy; Microsoft 2022</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div
+							class="font-size-sm right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="页面操作">
+
+							<div id="affixed-right-container" class="margin-top-sm-tablet doc-outline is-vertically-scrollable" data-bi-name="right-column">
+								<section id="right-rail-events" data-bi-name="events-card" class="margin-bottom-xxs" hidden></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations" class="margin-bottom-xxs" hidden></section>
+								<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="文章大纲">
+									<h3>本文内容</h3>
+								</nav>
+								<section id="right-rail-learning-resources" class="margin-top-xxs" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="主题" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>主题</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs">
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+亮					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+暗					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高对比度					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/previous-versions/" data-bi-name="archivelink">旧版文档</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/teamblog/" data-bi-name="bloglink">博客</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/contribute/" data-bi-name="contributorGuide">参与</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隐私和 Cookie</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/legal/termsofuse" data-bi-name="termsofuse">使用条款</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商标</a></li>
+		<li>&copy; Microsoft 2022</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="操作面板" class="action-panel has-default-focus" 

@@ -1,0 +1,16 @@
+E:\project\Spider2\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+E:\project\Spider2\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+E:\project\Spider2\ConsoleApplication1\bin\Release\WebDriver.dll
+E:\project\Spider2\ConsoleApplication1\obj\Release\ConsoleApplication1.csproj.AssemblyReference.cache
+E:\project\Spider2\ConsoleApplication1\obj\Release\ConsoleApplication1.csproj.SuggestedBindingRedirects.cache
+E:\project\Spider2\ConsoleApplication1\obj\Release\ConsoleApplication1.csproj.CoreCompileInputs.cache
+E:\project\Spider2\ConsoleApplication1\obj\Release\ConsoleApplication1.csproj.CopyComplete
+E:\project\Spider2\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
+E:\project\Spider2\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb
+E:\project\Spider2\ConsoleApplication1\bin\Release\LoadJS.dll
+E:\project\Spider2\ConsoleApplication1\bin\Release\LoadJS.pdb
+E:\project\Spider2\ConsoleApplication1\bin\Release\AngleSharp.dll
+E:\project\Spider2\ConsoleApplication1\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+E:\project\Spider2\ConsoleApplication1\bin\Release\System.Text.Encoding.CodePages.dll
+E:\project\Spider2\ConsoleApplication1\bin\Release\AngleSharp.xml
+E:\project\Spider2\ConsoleApplication1\bin\Release\System.Runtime.CompilerServices.Unsafe.xml

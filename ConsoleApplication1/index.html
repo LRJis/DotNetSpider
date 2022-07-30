@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body id="body">
+<h1>
+    Hello, world!
+</h1>
+<button id="first" class="button1">
+    Click me!
+</button>
+
+</body>
+
+</html>
+<script>
+    const button = document.getElementById("first");
+    let body = document.getElementById("body");
+    let i = 1;
+    button.onclick = function () {
+        body.innerHTML+="<p>"+i.toString()+"</p>";
+        i++
+    }
+</script>
